@@ -88,6 +88,9 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 		-show databases; [view list of databases]
 		-use <database name>[switch databases]
 
+## Docker get network ip address by this command
+	- docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
+
 ## Database using the tinker command::
 -docker-compose exec app php artisan tinker
 	\DB::table('table_name')->get();
